@@ -3,13 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './App.css';
+import { Provider } from 'react-redux';
+import store from '../src/components/redux/store';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
+
+
+import ByteHubApp from './ByteHubApp';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store} >
+    <ByteHubApp />
+    </Provider>
   </React.StrictMode>
 );
 
